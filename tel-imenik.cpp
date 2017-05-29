@@ -68,6 +68,25 @@ int main()
         }
         else if( izbor == 4 )
         {
+            string prezimeime;
+            cout << "Unesite ime i prezime osobe koju zelite pronaci: ";
+            cin.ignore();
+            getline(cin, prezimeime);
+            bool postoji=false;
+            for(int i=0; i < brojOsoba; i++)
+            {
+                if(prezimeime == prezimeIme[i])
+                {
+                    cout << "Postoji u telefonskom imeniku" << endl;
+                    postoji=true;
+                    cout << prezimeIme[i] << "\t" << brojtelefona[i] << "\t" << "\t" << adresa[i] << endl;
+                    break;
+                }
+                if( postoji==false )
+                {
+                    cout << "Nepostoji u telefonskom imeniku" << endl;
+                }
+            }
         }
         else if( izbor == 5 )
         {
