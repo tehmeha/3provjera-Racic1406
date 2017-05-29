@@ -13,6 +13,13 @@ int main()
     ofstream datotekaUpisivanje;
     ifstream datotekaUcitavanje;
 
+    datotekaUcitavanje.open("imenik.txt");
+    datotekaUcitavanje >> prezimeIme[brojOsoba];
+    datotekaUcitavanje >> brojtelefona[brojOsoba];
+    datotekaUcitavanje >> adresa[brojOsoba];
+    datotekaUcitavanje.close();
+    brojOsoba++;
+
     while(1)
     {
         cout << "Glavni izbornik" << endl;
